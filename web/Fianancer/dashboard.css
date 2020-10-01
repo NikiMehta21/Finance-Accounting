@@ -1,0 +1,129 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 Feb, 2019, 3:08:10 AM
+    Author     : ASUS
+*/
+body
+{
+   
+    margin:0px;
+    padding: 0px;
+    font-family: sans-serif;
+ }
+
+ul,ol
+{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header
+{
+   text-align: center;
+   font-style: italic;
+   font-weight: bold;
+   color: #160363;
+   margin-bottom: 1px;
+   margin-top: 5px;
+   
+}
+.border
+{
+    text-align: center;
+    width:10%;
+    margin:auto;
+    border-top: 2px double #160363;
+}
+.container1
+{
+    position: relative;
+    width: 1200px;
+    height:250px;
+    margin: 60px auto;
+   
+    
+}
+.container1 .box1
+{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background-color: #000;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+ }
+ .container1 .box1 .icon1
+ {
+     position: absolute;
+     top:0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background:#607D8B;
+ 
+     transition: 0.5s;
+     z-index: 1;
+ }
+.container1 .box1:hover .icon1
+{
+    top:20px;
+    left:calc(50% - 40px);
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.container1 .box1 .icon1 .fa
+{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    color:#000;
+}
+ .container1 .box1:hover .icon1 .fa
+ {
+     
+     font-size: 40px;
+ }
+ .container1 .box1 .content1
+ {
+     position: absolute;
+     top:100%;
+     height:calc(100% - 100px) ;
+     text-align: center;
+     padding-left:22%;
+     padding-top: 20px;
+     box-sizing: border-box;
+     transition: 0.5s;
+     opacity: 0;
+ }
+ .container1 .box1:hover .content1
+ {
+     top:100px;
+     opacity:1;
+     
+ }
+ .container1 .box1 .content1 h1
+ {
+     margin: 0 0 10px;
+     padding: 0;
+     color: #fff;
+     font-size: 24px;
+     text-align: center;
+}
+.container1 .box1 .content1 label
+ {
+     margin: 0;
+     padding: 0;
+     color: #fff;
+     
+}
