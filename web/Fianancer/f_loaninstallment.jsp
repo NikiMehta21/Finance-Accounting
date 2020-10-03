@@ -274,7 +274,52 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="transactions-table-tbody">
+                            <%                          while (rs.next() && rs1.next()) {
+
+                                    // out.print(rs.getString("customer_name"));
+%>                   
+
+                            <section class="card pull-up">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="col-12">
+                                            <div class="row">
+
+                                                <div class="col-md-2 col-12 py-1">
+                                                    <p class="mb-0"><span class="d-inline-block d-md-none text-bold-700">Ledger ID : </span><%= rs1.getString("loan_id")%>  </p>
+                                                </div>
+                                                <div class="col-md-2 col-12 py-1">
+                                                    <p class="mb-0"><span class="d-inline-block d-md-none text-bold-700">Ledger Parent : </span><%= rs1.getString("loanissue_date")%>   </p>
+                                                </div>
+                                                <div class="col-md-2 col-12 py-1">
+                                                    <p class="mb-0"><span class="d-inline-block d-md-none text-bold-700">Ledger : </span> <i class="cc ETH-alt"></i><%= rs1.getString("loanlast_date")%> </p>
+                                                </div>
+                                                <div class="col-md-2 col-12 py-1">
+                                                    <p class="mb-0"><span class="d-inline-block d-md-none text-bold-700">Ledger : </span> <i class="cc ETH-alt"></i><%= rs1.getString("amount")%> </p>
+                                                </div>
+                                                <div class="col-md-2 col-12 py-1">
+                                                    <p class="mb-0"><span class="d-inline-block d-md-none text-bold-700">Pay : </span> <a href="Fianancer.jsp?page=f_pay.jsp&edit=<%=rs1.getString("loan_id")%>" class="mb-0 btn-sm btn btn-outline-dark round"><i class="icon-pencil"></i>&nbsp;Pay</a> </p>
+                                                </div>
+
+
+                                                <%--   <div class="col-md-2 col-12 py-1">
+   <span class="d-inline-block d-md-none text-bold-700">Delete : </span> <a href="#" class="mb-0 btn-sm btn btn-outline-warning round"><i class="icon-trash"></i>&nbsp;Delete</a>
+   </div> --%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <%} %>
+                        </div>
+                    </div>
+                </div>
+                <%
+                    }
+                %>
+            </div>
         </div>
     </body>
     <script type="text/javascript">

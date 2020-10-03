@@ -98,7 +98,15 @@
                     </div>
                     <div class="transactions-table-tbody">
                         
-                         
+                         <%
+                            loan_masterController lmcontroller = new loan_masterController();
+                            loan_masterModal lmModal= new loan_masterModal();
+                            lmModal.setfianance_id(Integer.parseInt(a));
+                            ResultSet rs = lmcontroller.loan_masterGetDataid1(lmModal);
+                            while (rs.next()) {
+
+
+                        %>
 
                         
                       <section class="card pull-up">
@@ -130,7 +138,9 @@
                                 </div>
                             </div>
                         </section>
-                    
+                    <%
+                    }
+                    %>
                       <%--   <section class="card pull-up">
                             <div class="card-content">
                                 <div class="card-body">

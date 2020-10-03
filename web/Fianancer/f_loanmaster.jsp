@@ -203,11 +203,21 @@
                                     </fieldset>
 
                                     
-                                        
+                                        <fieldset class="form-label-group">
+                                            <input type="text" class="form-control" id="txtpayment" name="txtpayment"  required="" autofocus=""value="<%=payment%>">
+                                        <label for="PaymentBy" >Payment By</label>
+                                    </fieldset>
 
                                    
 
-                                    
+                                    <fieldset class="form-group">
+                                        <label for="first-name">Status</label>
+                                        <select name="dropStatus" id="dropStatus" class="form-control" value="<%=status%>">
+                                            <option value="Active">Active</option>
+                                            <option value="Deactive">Deactive</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
 
                                 <div class="col-12 text-right">
                                     <button type="submit" class="btn-gradient-primary my-1" name="btnSave">Save</button>
